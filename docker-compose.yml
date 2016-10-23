@@ -1,0 +1,12 @@
+psql:
+  image: postgres
+  ports:
+    - "5432"
+web:
+  build: .
+  ports:
+    - "4010"
+  links:
+    - psql
+  environment:
+    - BLEACHERBOT_HOST=djay_web_1.dev

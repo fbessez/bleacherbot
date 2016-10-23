@@ -1,0 +1,17 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "bleacher/bleacherbot:master",
+    "Update": true
+  },
+  "Logging": "/var/log/nginx",
+  "Ports": [
+    {
+      "ContainerPort": "4010"
+    }
+  ],
+  "Authentication": {
+    "Bucket": "docker-cfgs",
+    "Key": "brops.dockercfg"
+  }
+}
